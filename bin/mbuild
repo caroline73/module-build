@@ -1,1 +1,33 @@
 #!/usr/bin/env node
+
+var optimist = require('optimist');
+
+var argv = optimist
+.usage('mb [cmd] [options]\n mb -t dev 开发任务编译\n mb --t server 开启服务器编译 \n mb --t online 开发完毕打包到目标路径中')
+.string('t')
+.alias('t', 'task')
+.describe('t', '执行的gulp任务')
+.boolean('h')
+.alias('h', 'help')
+.describe('h', 'Show helps')
+.boolean('v')
+.alias('v', 'version')
+.describe('v', 'Show version.')
+.argv;
+
+if (argv.h) {
+  optimist.showHelp();
+  process.exit(0);
+}
+
+if (argv.v) {
+  console.log('v'+ require('../package.json').version);
+  process.exit(0);
+}
+
+//if (!argv.t || argv.t != 'online' || argv.t != 'server' || argv.t != 'dev') {
+//  console.log('执行命令不正确,请用-h查看');
+//  process.exit(0);
+//}
+
+require('../index.js')(argv.t);

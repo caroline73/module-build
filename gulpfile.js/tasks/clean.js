@@ -10,6 +10,7 @@ gulp.task('clean', function(cb) {
     config.tmpDir
   ], { force: true }, cb);
 });
+
 gulp.task('clean:img', function(cb) {
   return del([
     config.distDir + '/img'

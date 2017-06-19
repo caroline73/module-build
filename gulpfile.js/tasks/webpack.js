@@ -10,8 +10,8 @@ var config = require('../config');
 
 gulp.task('dev:noserver', function(cb) {
   webpack(_.merge(require('../webpack.config.js')({
-    outputs: 'quiz.js',
-    cssfile: 'quiz.css'
+    outputs: 'index.js',
+    cssfile: 'index.css'
   }), {
     devtool: false
   }), function(err, stats) {
@@ -24,8 +24,8 @@ gulp.task('dev:noserver', function(cb) {
 gulp.task('dev:server', function(cb) {
   new WebpackDevServer(
      webpack(_.merge(require('../webpack.config.js')({
-       outputs: 'quiz.js',
-       cssfile: 'quiz.css'
+       outputs: 'index.js',
+       cssfile: 'index.css'
      }), {
        devtool: false
      }), function(err, stats) {
@@ -51,8 +51,8 @@ gulp.task('dev:server', function(cb) {
 
 gulp.task('build:online', function(cb) {
   webpack(_.merge(require('../webpack.config.js')({
-    outputs: 'quiz.js',
-    cssfile: 'quiz.css',
+    outputs: 'index.js',
+    cssfile: 'index.css',
     env: 'production'
   }), {
     devtool: false

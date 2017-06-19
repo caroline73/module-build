@@ -36,8 +36,8 @@ function getLoaders(opt) {
       loader: 'url-loader?limit=25000&name=img/[name].[ext]'
     },
     {
-      test: /\.(hbs)$/,
-      loader: 'handlebars-loader?helperDirs[]=' + config.srcDir + '/helpers',
+      test: /\.hbs$/,
+      loader: 'handlebars-loader?helperDirs[]=' + config.srcDir + '/helpers'
     },
     {
       test: /\.(less|css)$/,

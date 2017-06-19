@@ -1,0 +1,31 @@
+{
+  "name": "pgc-fe-build",
+  "version": "1.0.0",
+  "description": "pgc前端模块开发使用的构建工具",
+  "dependencies": {
+    "del": "3.0.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "4.0.0",
+    "gulp-cdn-image": "1.0.25",
+    "gulp-notify": "3.0.0",
+    "gulp-util": "3.0.8",
+    "lodash": "4.17.4",
+    "optimist": "0.6.1",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^1.2.2",
+    "webpack": "2.6.1",
+    "webpack-dev-server": "2.4.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@git.pandatv.com:zhangshaohui/pgc-fe-build.git"
+  },
+  "bin": {
+    "mb": "./bin/mbuild",
+    "mbuild": "./bin/mbuild"
+  },
+  "author": "zhangshaohui",
+  "license": "ISC"
+}

@@ -2,11 +2,13 @@
 
 var path = require('path');
 
+// console.log(path.join(process.env.projPath, '/demo'));
+
 module.exports = {
-  demoDir: path.resolve(__dirname, '../demo'),
-  distDir: path.resolve(__dirname, '../dist'),
-  imgDir: path.resolve(__dirname, '../img'),
-  srcDir: path.resolve(__dirname, '../src'),
-  tmpDir: path.resolve(__dirname, '../.tmp'),
-  cdnDir: [path.resolve(__dirname, '../.tmp') + '/**', '!' + path.resolve(__dirname, '../.tmp') + '/{.img,img/**}']
+  demoDir: path.join(process.env.projPath, '/demo'),
+  distDir: path.join(process.env.projPath, '/dist'),
+  imgDir: path.join(process.env.projPath, '/img'),
+  srcDir: path.join(process.env.projPath, '/src'),
+  tmpDir: path.join(process.env.projPath, '/.tmp'),
+  cdnDir: [path.join(process.env.projPath, '/.tmp') + '/**', '!' + path.join(process.env.projPath, '/.tmp') + '/{.img,img/**}']
 };

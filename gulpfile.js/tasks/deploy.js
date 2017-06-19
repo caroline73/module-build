@@ -5,13 +5,13 @@
  * */
 
 var gulp = require('gulp');
-var gulpSequence = require('gulp-sequence');
+var runSequence = require('run-sequence');
 var cdnImage = require('gulp-cdn-image');
 var config = require('../config');
 
 
 gulp.task('deploy', function(cb) {
-  return gulpSequence('deploy:img', 'clean:img', cb);
+  return runSequence('deploy:img', 'clean:img', cb);
 });
 
 gulp.task('deploy:img', function() {
