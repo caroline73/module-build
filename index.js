@@ -15,8 +15,13 @@ module.exports = function(task) {
   } else if (currArr[currArr.length - 2] === 'src') {
     projectPath = path.resolve(currPath, '..', '..');
   }
+  if (task !== 'online') {
+    task = 'build:' + task;
+  }
   var mb = spawn('node', [
     path.join(__dirname, '/node_modules/gulp/bin/gulp.js'),
+    '--gulpfile',
+    path.join(__dirname, '/gulpfile.js'),
     task,
     '--projPath',
     projectPath
