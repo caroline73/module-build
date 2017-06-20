@@ -1,6 +1,6 @@
 {
   "name": "pgc-fe-build",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "pgc前端模块开发使用的构建工具",
   "dependencies": {
     "babel-loader": "7.0.0",
@@ -16,12 +16,13 @@
     "gulp-util": "3.0.8",
     "handlebars": "4.0.10",
     "handlebars-loader": "1.5.0",
+    "less": "2.7.2",
     "less-loader": "4.0.4",
     "lodash": "4.17.4",
     "optimist": "0.6.1",
     "require-dir": "0.3.2",
     "run-sequence": "1.2.2",
-    "style-loader": "^0.18.2",
+    "style-loader": "0.18.2",
     "through2": "2.0.3",
     "url-loader": "0.5.9",
     "webpack": "2.6.1",
