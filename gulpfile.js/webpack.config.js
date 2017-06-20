@@ -12,7 +12,10 @@ return {
     output: {
       path: config.tmpDir,
       publicPath: path.resolve(__dirname, '../'),
-      filename: getOutput(opt)
+      filename: getOutput(opt),
+      library: 'Quiz',
+      libraryTarget: 'umd',
+      umdNamedDefine: true
     },
     devtool: "eval",
     watch: false,

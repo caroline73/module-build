@@ -49,7 +49,7 @@ gulp.task('dev:server', function(cb) {
     });
 });
 
-gulp.task('build:online', function(cb) {
+gulp.task('dev:online', function(cb) {
   webpack(_.merge(require('../webpack.config.js')({
     outputs: 'index.js',
     cssfile: 'index.css',
