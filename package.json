@@ -1,6 +1,6 @@
 {
   "name": "pgc-fe-build",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "pgc前端模块开发使用的构建工具",
   "dependencies": {
     "babel-loader": "7.0.0",

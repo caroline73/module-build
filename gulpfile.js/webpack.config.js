@@ -2,7 +2,7 @@
 
 var webpack = require('webpack');
 var _ = require('lodash');
-// var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var config = require('./config');
 var path = require('path');
 
@@ -44,8 +44,8 @@ function getLoaders(opt) {
     },
     {
       test: /\.(less|css)$/,
-      // loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'less-loader']})
-      loader: 'style-loader!css-loader!less-loader'
+      loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'less-loader']})
+      // loader: 'style-loader!css-loader!less-loader'
     },
     {
       test: /\.js$/,
@@ -58,7 +58,7 @@ function getLoaders(opt) {
 
 function getPlugins(opt) {
   var defaultPlugins = [
-    // new ExtractTextPlugin(opt.cssfile)
+    new ExtractTextPlugin(opt.cssfile)
   ];
 
   var plugins = [];
