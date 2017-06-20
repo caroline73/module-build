@@ -45,7 +45,6 @@ function getLoaders(opt) {
     {
       test: /\.(less|css)$/,
       loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'less-loader']})
-      // loader: 'style-loader!css-loader!less-loader'
     },
     {
       test: /\.js$/,
@@ -72,10 +71,7 @@ function getPlugins(opt) {
           drop_console: true
         },
         sourceMap: true
-      }),
-      new webpack.LoaderOptionsPlugin({
-         minimize: true
-      }),
+      })
       new webpack.NoErrorsPlugin()
     ]);
   } else {

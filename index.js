@@ -10,11 +10,10 @@ module.exports = function(task) {
 
   if (fs.existsSync(path.resolve(currPath, 'src'))) {
     projectPath = currPath;
-  } else if (currArr[currArr.length - 1] === 'src') {
-    projectPath = path.resolve(currPath, '..');
-  } else if (currArr[currArr.length - 2] === 'src') {
-    projectPath = path.resolve(currPath, '..', '..');
-  }
+  } else {
+    
+  } 
+
   if (task !== 'online') {
     task = 'build:' + task;
   }

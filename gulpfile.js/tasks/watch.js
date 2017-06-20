@@ -22,8 +22,8 @@ gulp.task('watch:images', ['clean'], function() {
 
 gulp.task('watch:webpack', function() {
   webpack(_.merge(require('../webpack.config.js')({
-    outputs: 'quiz.js',
-    cssfile: 'quiz.css'
+    outputs: 'index.js',
+    cssfile: 'index.css'
   }), {
     watch: true
   })).watch(200, function(err, stats) {

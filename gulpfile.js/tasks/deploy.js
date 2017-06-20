@@ -44,11 +44,11 @@ gulp.task('deploy:css', function() {
           file: path.resolve(config.distDir, 'quiz.css')
         }, function(err, data) {
           if (err) {
-            return console.log('上传失败，原因是: '+ err);
+            return console.log('上传失败，原因是: ' + err);
           }
           if (data) {
             for(var k in data) {
-              console.log('上传文件: '+ k + '成功,地址是:\n' + data[k]);
+              console.log('上传文件: ' + k + '成功,地址是:\n' + data[k]);
             }
           }
           cb(null, file);

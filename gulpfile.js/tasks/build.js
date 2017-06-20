@@ -15,11 +15,11 @@ gulp.task('build:server', function() {
 });
 
 gulp.task('build:online', ['clean', 'dev:online'], function(){
-  gulp.src(config.tmpDir + '/quiz.css')
+  gulp.src(config.tmpDir + '/index.css')
     .pipe(autoPrefix('last 5 versions'))
     .pipe(gulp.dest(config.distDir));
 
-  gulp.src(config.tmpDir + '/quiz.js')
+  gulp.src(config.tmpDir + '/index.js')
     .pipe(gulp.dest(config.distDir));
 });
 
