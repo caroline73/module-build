@@ -11,7 +11,7 @@
 ```javasrcipt
 mbuild //或者 mb  [cmd] [options]
 
-//cmd 
+//cmd
 -t  //执行构建任务
 -h  //帮助
 -v  //版本号
