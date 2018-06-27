@@ -13,18 +13,18 @@ let options = {
   port: 0,
   exclude: ['common', 'vue-common'],
   ssl: true,
-  iSSLHost: 'i.h2.pdim.gs', // ssl图片域名,
-  sSSLHost: 's.h2.pdim.gs', // ssl静态资源域名,
+  iSSLHost: '', // ssl图片域名,
+  sSSLHost: '', // ssl静态资源域名,
   cache: true
 }
 
 function checkIP() {
   const hostname = os.hostname();
   const map = {
-    dev02: '10.20.1.12',
-    dev04: '10.20.1.14',
-    dev05: '10.20.1.15',
-    dev09: '10.20.1.19'
+    dev02: '10.0.0.1',
+    dev04: '10.0.0.4',
+    dev05: '10.0.0.5',
+    dev09: '10.0.0.9'
   };
   const matches = hostname.match(/(dev0\d+)/);
   if (matches && matches[0]) {
