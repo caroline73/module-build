@@ -9,7 +9,7 @@
 
 # 构建命令
 ```javasrcipt
-mbuild //或者 mb  [cmd] [options]
+mbuild //或者 m  [cmd] [options]
 
 //cmd
 -t  //执行构建任务
@@ -19,5 +19,4 @@ mbuild //或者 mb  [cmd] [options]
 //options
 online   //开发完毕，将代码发布打包到dist目录
 server   //开启服务器，需要在浏览器中进行调试
-dev      //开发，不需要开启服务器
 ```
