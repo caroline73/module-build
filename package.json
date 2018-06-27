@@ -31,12 +31,11 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git@git.pandatv.com:zhangshaohui/pgc-fe-build.git"
+    "url": "git@github.com:caroline73/fe-module-build.git"
   },
   "bin": {
-    "mb": "./bin/mbuild",
+    "m": "./bin/mbuild",
     "mbuild": "./bin/mbuild"
   },
-  "author": "zhangshaohui",
   "license": "ISC"
 }
